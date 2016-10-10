@@ -16,6 +16,8 @@
 		36943C641BCC2A9C00F388BD /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36943C621BCC2A9C00F388BD /* Contact+CoreDataProperties.swift */; };
 		36943C651BCC2A9C00F388BD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36943C631BCC2A9C00F388BD /* Contact.swift */; };
 		36943C671BCC2E2700F388BD /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36943C661BCC2E2700F388BD /* ContactTableViewController.swift */; };
+		905E49301DAC48EE00EF3D6A /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 905E492D1DAC48EE00EF3D6A /* Contact+CoreDataProperties.m */; };
+		905E49311DAC48EE00EF3D6A /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 905E492F1DAC48EE00EF3D6A /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,11 @@
 		36943C621BCC2A9C00F388BD /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		36943C631BCC2A9C00F388BD /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		36943C661BCC2E2700F388BD /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		905E492B1DAC48ED00EF3D6A /* MyContacts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyContacts-Bridging-Header.h"; sourceTree = "<group>"; };
+		905E492C1DAC48EE00EF3D6A /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		905E492D1DAC48EE00EF3D6A /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		905E492E1DAC48EE00EF3D6A /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		905E492F1DAC48EE00EF3D6A /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,11 +53,16 @@
 		36943C411BCC2A4200F388BD = {
 			isa = PBXGroup;
 			children = (
+				905E492C1DAC48EE00EF3D6A /* Contact+CoreDataProperties.h */,
+				905E492D1DAC48EE00EF3D6A /* Contact+CoreDataProperties.m */,
+				905E492E1DAC48EE00EF3D6A /* Contact.h */,
+				905E492F1DAC48EE00EF3D6A /* Contact.m */,
 				36943C661BCC2E2700F388BD /* ContactTableViewController.swift */,
 				36943C621BCC2A9C00F388BD /* Contact+CoreDataProperties.swift */,
 				36943C631BCC2A9C00F388BD /* Contact.swift */,
 				36943C4C1BCC2A4200F388BD /* MyContacts */,
 				36943C4B1BCC2A4200F388BD /* Products */,
+				905E492B1DAC48ED00EF3D6A /* MyContacts-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +114,7 @@
 		36943C421BCC2A4200F388BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Chuck Konkol";
 				TargetAttributes = {
@@ -146,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905E49311DAC48EE00EF3D6A /* Contact.m in Sources */,
 				36943C641BCC2A9C00F388BD /* Contact+CoreDataProperties.swift in Sources */,
+				905E49301DAC48EE00EF3D6A /* Contact+CoreDataProperties.m in Sources */,
 				36943C501BCC2A4300F388BD /* ViewController.swift in Sources */,
 				36943C671BCC2E2700F388BD /* ContactTableViewController.swift in Sources */,
 				36943C651BCC2A9C00F388BD /* Contact.swift in Sources */,
@@ -268,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyContacts/Info.plist;
@@ -275,6 +291,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rockvalleycollege.edu.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fe4d8db9-98a5-42d2-8b1b-f1e451ceb996";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyContacts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -282,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = MyContacts/Info.plist;
@@ -289,6 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rockvalleycollege.edu.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fe4d8db9-98a5-42d2-8b1b-f1e451ceb996";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyContacts-Bridging-Header.h";
 			};
 			name = Release;
 		};
